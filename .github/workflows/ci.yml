@@ -23,7 +23,7 @@ jobs:
 
       - name: Install Compact toolchain
         run: |
-          curl --proto '=https' --tlsv1.2 -LsSf https://raw.githubusercontent.com/midnightntwrk/compact/main/install.sh | sh
+          curl --proto '=https' --tlsv1.2 -LsSf https://github.com/midnightntwrk/compact/releases/latest/download/compact-installer.sh | sh
           echo "$HOME/.compact/bin" >> $GITHUB_PATH
 
       - name: Compile contract
@@ -65,7 +65,7 @@ jobs:
 
       - name: Install Compact toolchain
         run: |
-          curl --proto '=https' --tlsv1.2 -LsSf https://raw.githubusercontent.com/midnightntwrk/compact/main/install.sh | sh
+          curl --proto '=https' --tlsv1.2 -LsSf https://github.com/midnightntwrk/compact/releases/latest/download/compact-installer.sh | sh
           echo "$HOME/.compact/bin" >> $GITHUB_PATH
 
       - name: Deploy to Preview
