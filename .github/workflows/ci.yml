@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Compact toolchain
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://raw.githubusercontent.com/midnightntwrk/compact/main/install.sh | sh
+          echo "$HOME/.compact/bin" >> $GITHUB_PATH
+
+      - name: Compile contract
+        run: |
+          cd contract
+          compact update
+          npm run compact
+
+      - name: Run contract tests
+        run: npm test
+        working-directory: ./contract
+
+      - name: Run typecheck
+        run: npm run typecheck
+        working-directory: ./contract
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: ./frontend
+        env:
+          VITE_CONTRACT_ADDRESS: ${{ secrets.CONTRACT_ADDRESS }}
+          VITE_NETWORK: preview
+
+  deploy-preview:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Compact toolchain
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://raw.githubusercontent.com/midnightntwrk/compact/main/install.sh | sh
+          echo "$HOME/.compact/bin" >> $GITHUB_PATH
+
+      - name: Deploy to Preview
+        run: |
+          cd cli
+          npm run deploy:preview
+        env:
+          WALLET_SEED: ${{ secrets.WALLET_SEED }}
+          IDENTITY_SECRET_KEY: ${{ secrets.IDENTITY_SECRET_KEY }}

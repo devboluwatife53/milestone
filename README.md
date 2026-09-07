@@ -1,5 +1,7 @@
 # Milestone — a public wall for celebrating wins on Midnight
 
+![CI](https://github.com/devboluwatife53/milestone/workflows/CI/badge.svg)
+
 ## Product idea
 
 Milestone is a public forum built with Compact: connect a wallet, drop a
