@@ -29,11 +29,11 @@ application actually needs the world to see — nothing more.
 
 ## Live demo
 
-**[milestone-on-midnight.vercel.app](https://milestone-on-midnight.vercel.app)** — connect Lace (Preview network), drop a milestone, and reply to someone else's.
+**[milestone-on-midnight.vercel.app](https://milestone-on-midnight.vercel.app)** — connect your wallet, drop a milestone, and reply to someone else's.
 
 ## Demo video
 
-`TODO: link a short recording of wallet connect + a successful post() call landing on the wall.`
+https://www.loom.com/share/dd38bd695ae945d2bec96e534d596111
 
 ## Public state vs. private witness
 
