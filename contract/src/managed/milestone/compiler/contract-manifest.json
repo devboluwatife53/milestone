@@ -1,0 +1,78 @@
+{
+  "manifest-version": "1",
+  "compiler-version": "0.34.0",
+  "language-version": "0.26.0",
+  "runtime-version": "0.19.0",
+  "compiler": {
+    "type": "directory",
+    "contract-info.json": {
+      "type": "file",
+      "size": 2493,
+      "hash": "9f95819c6aef26f551b66d79b017a79a9a9ca59774a9464ec59f51c07e60a8b3"
+    }
+  },
+  "contract": {
+    "type": "directory",
+    "index.d.ts": {
+      "type": "file",
+      "size": 2485,
+      "hash": "86377d2023502717a318df02c09961e5ddd793f498a4ec15eeb31e5961751e06"
+    },
+    "index.js": {
+      "type": "file",
+      "size": 41215,
+      "hash": "057fc65075cd6317469c24d680f330927c208ed51daf1b29c0074cda305096eb"
+    },
+    "index.js.map": {
+      "type": "file",
+      "size": 1505,
+      "hash": "1dc7ffc7080f50033f5edb7e8a9acfd38869247ee5678537fa14737bb5b868a9"
+    }
+  },
+  "zkir": {
+    "type": "directory",
+    "post.bzkir": {
+      "type": "file",
+      "size": 331,
+      "hash": "7300e217e121a33b3cd9fad6775448717d1d0aa751138a608049539fca2e0947"
+    },
+    "post.zkir": {
+      "type": "file",
+      "size": 4901,
+      "hash": "4e4c85168936d880a1a47ac400580e38d43a55f30ae2e7ee2726a6723b299fa6"
+    },
+    "reply.bzkir": {
+      "type": "file",
+      "size": 385,
+      "hash": "7a664e1d1c00f7220ca35e08e344c3761dbb964e968096d9a11aa042df7fb63d"
+    },
+    "reply.zkir": {
+      "type": "file",
+      "size": 5793,
+      "hash": "ac0f69816824ae5aef32da2e50eabbee7d4f2b000749b11ef6b2c45b1447c58c"
+    }
+  },
+  "keys": {
+    "type": "directory",
+    "post.prover": {
+      "type": "file",
+      "size": 2820184,
+      "hash": "5f3dcf29c6860a4f6c3219e899fbca93a677640cdea7edbb530032cdfacc1009"
+    },
+    "post.verifier": {
+      "type": "file",
+      "size": 2119,
+      "hash": "5cf9e75e910f5a2a31caf3ef14014da97b4689a05c4b1735b0256394a90cb846"
+    },
+    "reply.prover": {
+      "type": "file",
+      "size": 2820574,
+      "hash": "036639f5cc30a3199355a93d8d65e8fa4e87d1ad6ec5a0c94b299ab6063cf0d6"
+    },
+    "reply.verifier": {
+      "type": "file",
+      "size": 2119,
+      "hash": "8da821bcf96aed7d01d1ac65b4adfbda07b0fa8b5176d53d8680c739595b6288"
+    }
+  }
+}
