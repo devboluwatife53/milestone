@@ -215,6 +215,22 @@ choose) secret key and confirm it matches what's on chain — but nobody
 can go the other direction and recover your key, or your wallet address,
 from the pin alone.
 
+## Test output
+
+**8 tests passing** — contract logic against in-memory simulator:
+
+```
+ RUN  v4.1.11 /Users/apple/software/oss/oss-bolu/midnight/contract
+
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  20:53:04
+   Duration  1.31s (transform 318ms, setup 0ms, import 427ms, tests 436ms, environment 0ms)
+```
+
+See [CI workflow](https://github.com/devboluwatife53/milestone/actions) for automated test runs.
+
 ## Screenshots
 
 **`compact compile` + test output** — compiled circuits and the generated `managed/` tree (zkir + prover/verifier keys):
